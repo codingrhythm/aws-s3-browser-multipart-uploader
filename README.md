@@ -7,7 +7,7 @@ This implementation is heavily inspired by [s3-multipart-upload-browser](https:/
 
 # Features
 
-1. Multi-parts upload, files are sliced into chunks and uploaded separately. So the uploading progress can be paused and resumed. If one chunk is fail, it can be retried later without failing the whole file upload.
+1. Multi-parts upload, files are sliced into chunks and each chunk is uploaded separately. So the uploading progress can be paused and resumed. If one chunk is fail, it can be retried later without failing the whole file upload.
 
 2. Multi file upload support, files can be uploaded concurrently. So small files don't need to wait for the large files to complete the upload.
 
