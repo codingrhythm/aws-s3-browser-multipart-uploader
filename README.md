@@ -13,7 +13,7 @@ Chrome 6+, FF 4+, and IE 10+
 
 # How to use
 
-check `demo.html` file. And you may also want to change the S3FileManager.prototype.config settings in `s3_uploader.js`
+check `demo.html` file. And you may also want to change the `S3FileManager.prototype.config` settings in `s3_uploader.js`
 
 # Server Implementation
 
