@@ -15,6 +15,24 @@ Chrome 6+, FF 4+, and IE 10+
 
 check `demo.html` file. And you may also want to change the `S3FileManager.prototype.config` settings in `s3_uploader.js`
 
+You also need to update your bucket CORS settings like this:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+    <CORSRule>
+        <AllowedOrigin>yourdomain.com</AllowedOrigin>
+        <AllowedMethod>GET</AllowedMethod>
+        <AllowedMethod>POST</AllowedMethod>
+        <AllowedMethod>PUT</AllowedMethod>
+        <AllowedMethod>DELETE</AllowedMethod>
+        <MaxAgeSeconds>3000</MaxAgeSeconds>
+        <ExposeHeader>Etag</ExposeHeader>
+        <AllowedHeader>*</AllowedHeader>
+    </CORSRule>
+</CORSConfiguration>
+```
+
 # Server Implementation
 
 The script need a server side code to sign the requests. So you need to do server implementation yourself and please check `server.py` for more details.
