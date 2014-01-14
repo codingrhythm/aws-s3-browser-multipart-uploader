@@ -5,6 +5,15 @@ Upload large files in multipart from browser.
 
 This implementation is heavily inspired by [s3-multipart-upload-browser](https://github.com/hridayeshgupta/s3-multipart-upload-browser).
 
+# Features
+
+1. Multi-parts upload, files are sliced into chunks and uploaded separately. So the uploading progress can be paused and resumed. If one chunk is fail, it can be retried later without failing the whole file upload.
+
+2. Multi file upload support, files can be uploaded concurrently. So small files don't need to wait for the large files to complete the upload.
+
+3. Smooth progress bar. The upload progress can be captured to byte level. So a smooth upload progress bar can be implemented.
+
+
 # Browser Support
 
 Browsers that support html5 file.slice API.
