@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>S3 Uploader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <!-- Optional theme 
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    -->
+
+    <link rel="stylesheet" href="{{STATIC_URL}}css/site.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+<div class="action-bar clearfix">
+    <input id="btn-browse" type="file" multiple="multiple" class="pull-left">
+    <button id="btn-upload" type="button" class="btn btn-success pull-right hidden">Upload</button>
+    <button id="btn-pause-upload" type="button" class="btn btn-warning pull-right hidden">Pause</button>
+    <button id="btn-cancel-upload" type="button" class="btn btn-danger pull-right hidden">Cancel</button>
+</div>
+
+
+<div style="max-height:400px;overflow:scroll;margin-bottom:20px;">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th width="50%">Name</th>
+                <th width="15%">Size</th>
+                <th width="45%">Status</th>
+            </tr>
+        </thead>
+        <tbody id="file-list">
+            <tr><td colspan="3">Please select files to upload</td></tr>
+        </tbody>
+
+    </table>
+</div>
+
+<div id="upload-progress" class="progress hidden">
+    <div class="progress-bar">
+    </div>
+</div>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="s3_uploader.js"></script>
+</body>
+</html>
